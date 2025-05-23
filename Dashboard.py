@@ -183,16 +183,19 @@ with tab1:
 
     # Load and display the GIF
     try:
-        with open("images/homepage.png", "rb") as img_file:
+        with open("images/home.png"
+                  "", "rb") as img_file:
             img_base64 = base64.b64encode(img_file.read()).decode()
         st.markdown(
             f'<img src="data:image/png;base64,{img_base64}" class="full-width-gif" alt="Homepage GIF">',
             unsafe_allow_html=True
         )
     except FileNotFoundError:
-        st.warning("homepage.png not found in the images folder. Please ensure the file exists.")
+        st.warning("home.png"
+                   " not found in the images folder. Please ensure the file exists.")
     except Exception as e:
-        st.error(f"Error loading homepage.png: {e}")
+        st.error(f"Error loading home.png"
+                 f": {e}")
 
 with tab3:
     # Initialize session state for visualization selection
